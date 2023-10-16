@@ -11,7 +11,7 @@ const Ball = ({ imgUrl }: { imgUrl: string }) => {
   const [decal] = useTexture([imgUrl]);
 
   return (
-    <Float speed={0.75} rotationIntensity={0.5} floatIntensity={2}>
+    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.35} />
       <directionalLight position={[0, 0.01, 0.05]} />
       <mesh castShadow receiveShadow scale={2.75}>
@@ -25,7 +25,7 @@ const Ball = ({ imgUrl }: { imgUrl: string }) => {
 
 const BallCanvas: React.FC<BallCanvasProps> = ({ icon }) => {
   return (
-    <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
+    <Canvas gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
