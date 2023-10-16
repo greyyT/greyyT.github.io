@@ -6,6 +6,6 @@ import Tech from './Tech';
 import Works from './Works';
 import Contact from './Contact';
 import CanvasLoader from './CanvasLoader';
-import { ComputerCanvas, StarsCanvas } from './canvas';
+import { ComputerCanvas, StarsCanvas, BallCanvas } from './canvas';
 
-export { About, Navbar, Hero, Experience, Tech, Works, Contact, ComputerCanvas, StarsCanvas, CanvasLoader };
+export { About, Navbar, Hero, Experience, Tech, Works, Contact, ComputerCanvas, StarsCanvas, CanvasLoader, BallCanvas };

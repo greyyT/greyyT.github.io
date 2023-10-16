@@ -1,7 +1,7 @@
 import { SectionWrapper } from '@/hoc';
 import { services } from '@/constants';
 import { styles } from '@/styles';
-import { fadeIn } from '@/utils/motion';
+import { fadeIn, textVariant } from '@/utils/motion';
 import { motion } from 'framer-motion';
 import ReactParallaxTilt from 'react-parallax-tilt';
 
@@ -30,7 +30,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, icon }) => {
 const AboutPage = () => {
   return (
     <>
-      <motion.div>
+      <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
