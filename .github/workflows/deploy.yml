@@ -30,9 +30,9 @@ jobs:
           node-version: 14 # Use the desired Node.js version
           cache: 'npm'
       - name: Set up Environment Variables
-        run: echo "VITE_SERVICE_ID=$VITE_SERVICE_ID" >> .env
-      - run: echo "VITE_TEMPLATE_ID=$VITE_TEMPLATE_ID" >> .env
-      - run: echo "VITE_PUBLIC_KEY=$VITE_PUBLIC_KEY" >> .env
+        run: echo "VITE_SERVICE_ID=${{ secrets.VITE_SERVICE_ID }}" >> .env
+      - run: echo "VITE_TEMPLATE_ID=${{ secrets.VITE_TEMPLATE_ID }}" >> .env
+      - run: echo "VITE_PUBLIC_KEY=${{ secrets.VITE_PUBLIC_KEY }}" >> .env
       - name: Install dependencies
         run: npm install
       - name: Build
