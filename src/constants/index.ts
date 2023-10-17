@@ -215,7 +215,10 @@ const projects = [
       },
     ],
     image: luna,
+    github_repo: true,
     source_code_link: 'https://github.com/greyyT/luna-eprocurement-system',
+    live_demo: true,
+    live_demo_link: 'https://greyyt.github.io/luna-eprocurement-system/',
   },
   {
     name: 'Aisia Research Lab',
@@ -236,7 +239,10 @@ const projects = [
       },
     ],
     image: aisiaWeb,
-    source_code_link: 'https://github.com/',
+    github_repo: false,
+    source_code_link: '',
+    live_demo: true,
+    live_demo_link: 'https://aisia.vn/',
   },
   {
     name: 'Ubunchuu Truong US',
@@ -249,7 +255,10 @@ const projects = [
       },
     ],
     image: ubunchuu,
-    source_code_link: 'https://github.com/',
+    github_repo: true,
+    source_code_link: 'https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io',
+    live_demo: true,
+    live_demo_link: 'https://ubunchuu-truong-us.github.io/',
   },
 ];
 
