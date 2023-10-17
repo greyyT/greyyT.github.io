@@ -40,7 +40,7 @@ const AboutPage = () => {
         with clients to develop efficient, scalable, and user-friendly solutions that address real-world challenges. I'm
         looking forward to working together and bringing your innovative ideas to life.
       </motion.p>
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex justify-center flex-wrap gap-10">
         {services.map((service, idx: number) => (
           <ServiceCard key={idx} index={idx} {...service} />
         ))}

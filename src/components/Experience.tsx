@@ -12,7 +12,16 @@ interface ExperienceCardProps {
   icon: string;
   iconBg: string;
   date: string;
-  points: string[];
+  points: (
+    | {
+        content: string;
+        subContent: null;
+      }
+    | {
+        content: string;
+        subContent: string[];
+      }
+  )[];
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ title, company_name, icon, iconBg, date, points }) => {
@@ -24,7 +33,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ title, company_name, ic
       iconStyle={{ background: iconBg }}
       icon={
         <div className="flex items-center justify-center w-full h-full">
-          <img src={icon} alt={company_name} className="w-[60%] h-[60%] object-contain" />
+          <img src={icon} alt={company_name} className="w-[80%] h-[80%] object-contain" />
         </div>
       }
     >
@@ -37,7 +46,16 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ title, company_name, ic
       <ul className="mt-5 list-disc ml-5 space-y-2">
         {points.map((point, idx: number) => (
           <li key={idx} className="text-white-100 text-sm pl-1 tracking-wider">
-            {point}
+            {point.content}
+            {point.subContent && (
+              <ul className="list-disc ml-5 mt-3 space-y-2">
+                {point.subContent.map((subPoint, idx: number) => (
+                  <li key={idx} className="text-secondary text-sm pl-1 tracking-wider">
+                    {subPoint}
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ))}
       </ul>

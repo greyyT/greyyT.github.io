@@ -3,26 +3,26 @@ import {
   backend,
   creator,
   web,
-  javascript,
   typescript,
   html,
   css,
   reactjs,
-  redux,
-  tailwind,
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
   jobit,
   tripguide,
-  threejs,
+  hcmus,
+  aisia,
+  postgre,
+  django,
+  express,
+  linux,
+  python,
+  luna,
+  aisiaWeb,
+  ubunchuu,
 } from '@/assets';
 
 export const navLinks = [
@@ -69,24 +69,12 @@ const technologies = [
     icon: css,
   },
   {
-    name: 'JavaScript',
-    icon: javascript,
-  },
-  {
     name: 'TypeScript',
     icon: typescript,
   },
   {
     name: 'React JS',
     icon: reactjs,
-  },
-  {
-    name: 'Redux Toolkit',
-    icon: redux,
-  },
-  {
-    name: 'Tailwind CSS',
-    icon: tailwind,
   },
   {
     name: 'Node JS',
@@ -97,74 +85,90 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: 'Three JS',
-    icon: threejs,
+    name: 'PostgreSQL',
+    icon: postgre,
   },
   {
     name: 'git',
     icon: git,
   },
   {
-    name: 'figma',
-    icon: figma,
+    name: 'django',
+    icon: django,
+  },
+  {
+    name: 'express',
+    icon: express,
   },
   {
     name: 'docker',
     icon: docker,
   },
+  {
+    name: 'linux',
+    icon: linux,
+  },
+  {
+    name: 'python',
+    icon: python,
+  },
 ];
 
 const experiences = [
   {
-    title: 'React.js Developer',
-    company_name: 'Starbucks',
-    icon: starbucks,
-    iconBg: '#383E56',
-    date: 'March 2020 - April 2021',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'React Native Developer',
-    company_name: 'Tesla',
-    icon: tesla,
+    title: 'Bachelor Degree in Data Science',
+    company_name: 'University of Science - VNUHCM',
+    icon: hcmus,
     iconBg: '#E6DEDD',
-    date: 'Jan 2021 - Feb 2022',
+    date: 'Oct 2021 - Present',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      {
+        content: 'Current GPA: 3.26/4.0',
+        subContent: null,
+      },
+      {
+        content: 'Revelant Coursework:',
+        subContent: [
+          'Databases',
+          'Database Management Systems',
+          'Computer Network',
+          'Data Structures and Algorithms',
+          'Probability and Statistics',
+          'Discrete Math',
+          'Object Oriented Programming',
+        ],
+      },
+      {
+        content: 'Activities:',
+        subContent: ['Former member of the VNU HCMUS Math and Computer Science Academic Club (2021 - 2022).'],
+      },
     ],
   },
   {
-    title: 'Web Developer',
-    company_name: 'Shopify',
-    icon: shopify,
-    iconBg: '#383E56',
-    date: 'Jan 2022 - Jan 2023',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'Full stack Developer',
-    company_name: 'Meta',
-    icon: meta,
+    title: 'Frontend Developer Freelancer',
+    company_name: 'AISIA Research Lab',
+    icon: aisia,
     iconBg: '#E6DEDD',
-    date: 'Jan 2023 - Present',
+    date: 'Jan 2023 - March 2023',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      {
+        content:
+          'Reimplementing the old website written in Wordpress to a new, clean, maintainable website supported by Ruby on Rails template engine and other technologies.',
+        subContent: null,
+      },
+      {
+        content:
+          'Collaborating with cross-functional teams including designers and other developers to create high-quality products.',
+        subContent: null,
+      },
+      {
+        content: 'Implementing responsive design and ensuring cross-browser compatibility.',
+        subContent: null,
+      },
+      {
+        content: 'Participating in code reviews and providing constructive feedback to other developers.',
+        subContent: null,
+      },
     ],
   },
 ];
@@ -195,66 +199,58 @@ const testimonials = [
 
 const projects = [
   {
-    name: 'Car Rent',
+    name: 'Luna eProcurement',
     description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+      'Web-based platform for project and member management, providing control over project outcomes and effective product and vendor management.',
     tags: [
       {
         name: 'react',
         color: 'blue-text-gradient',
-      },
-      {
-        name: 'mongodb',
-        color: 'green-text-gradient',
       },
       {
         name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: carrent,
-    source_code_link: 'https://github.com/',
-  },
-  {
-    name: 'Job IT',
-    description:
-      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'restapi',
         color: 'green-text-gradient',
       },
       {
-        name: 'scss',
+        name: 'django',
         color: 'pink-text-gradient',
       },
     ],
-    image: jobit,
-    source_code_link: 'https://github.com/',
+    image: luna,
+    source_code_link: 'https://github.com/greyyT/luna-eprocurement-system',
   },
   {
-    name: 'Trip Guide',
+    name: 'Aisia Research Lab',
     description:
-      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+      'A web application designed for the Aisia Research Lab to showcase their research projects, team members, courses, services and publications.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'html',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'tailwind',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'javascript',
         color: 'pink-text-gradient',
       },
     ],
-    image: tripguide,
+    image: aisiaWeb,
+    source_code_link: 'https://github.com/',
+  },
+  {
+    name: 'Ubunchuu Truong US',
+    description:
+      'A university community project dedicated to assisting students in learning, installing, and exchanging knowledge about Linux and its various distributions.',
+    tags: [
+      {
+        name: 'hugo',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: ubunchuu,
     source_code_link: 'https://github.com/',
   },
 ];
