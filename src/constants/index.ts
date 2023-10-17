@@ -11,8 +11,6 @@ import {
   mongodb,
   git,
   docker,
-  jobit,
-  tripguide,
   hcmus,
   aisia,
   postgre,
