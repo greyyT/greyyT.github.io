@@ -32,11 +32,11 @@ const Navbar = () => {
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-lg font-bold cursor-pointer flex">
-            <span className="sm:block hidden">Nguyen Trong Nhan</span>
-            <span className="sm:hidden block">Nhan Nguyen</span>
+            <span className="lg:block hidden">Nguyen Trong Nhan</span>
+            <span className="lg:hidden block">Nhan Nguyen</span>
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden md:flex flex-row gap-10">
           {navLinks.map((link, idx: number) => (
             <li
               key={idx}
@@ -69,7 +69,7 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="md:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -110,6 +110,22 @@ const Navbar = () => {
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
               ))}
+              <li>
+                <a
+                  href="https://drive.google.com/file/d/1knhgSCP3wEGXOjMqf4p5FstiRZDtBQgq/view?usp=sharing"
+                  className="font-poppins font-medium text-lg cursor-pointer text-secondary hover:text-white"
+                  onClick={(ev) => {
+                    ev.preventDefault();
+
+                    window.open(
+                      'https://drive.google.com/file/d/1knhgSCP3wEGXOjMqf4p5FstiRZDtBQgq/view?usp=sharing',
+                      '_blank',
+                    );
+                  }}
+                >
+                  Résumé
+                </a>
+              </li>
             </ul>
           </div>
         </div>

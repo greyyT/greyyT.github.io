@@ -96,7 +96,7 @@ const WorksPage = () => {
       </div>
       <motion.div
         variants={fadeIn('', '', 0.1, 1)}
-        className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] flex gap-8"
+        className="mt-8 text-secondary text-[17px] max-w-3xl leading-[30px] flex sm:flex-row flex-col gap-4 sm:gap-8"
       >
         <div className="flex gap-2 items-center">
           <img src={github} alt="" className="w-8 h-8" />
