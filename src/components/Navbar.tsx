@@ -52,6 +52,14 @@ const Navbar = () => {
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1knhgSCP3wEGXOjMqf4p5FstiRZDtBQgq/view?usp=sharing"
+              className="font-poppins font-medium text-lg cursor-pointer text-secondary hover:text-white"
+            >
+              Résumé
+            </a>
+          </li>
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
@@ -94,14 +102,6 @@ const Navbar = () => {
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
               ))}
-              <li>
-                <a
-                  href="https://drive.google.com/file/d/1knhgSCP3wEGXOjMqf4p5FstiRZDtBQgq/view?usp=sharing"
-                  className="font-poppins font-medium cursor-pointer text-secondary hover:text-white"
-                >
-                  Résumé
-                </a>
-              </li>
             </ul>
           </div>
         </div>
