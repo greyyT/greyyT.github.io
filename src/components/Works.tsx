@@ -80,6 +80,6 @@ const WorksPage = () => {
   );
 };
 
-const Works = SectionWrapper(WorksPage, 'works');
+const Works = SectionWrapper(WorksPage, 'work');
 
 export default Works;
