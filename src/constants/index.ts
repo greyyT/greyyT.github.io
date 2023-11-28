@@ -21,6 +21,7 @@ import {
   luna,
   aisiaWeb,
   ubunchuu,
+  netflix,
 } from '@/assets';
 
 export const navLinks = [
@@ -40,7 +41,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: 'Web Developer',
+    title: 'Frontend Developer',
     icon: web,
   },
   {
@@ -243,6 +244,30 @@ const projects = [
     source_code_link: '',
     live_demo: true,
     live_demo_link: 'https://aisia.vn/',
+  },
+  {
+    name: 'Netflix Clone',
+    description:
+      'A Netflix clone built with NextJS 13 using pages router, TailwindCSS recreate main features of Netflix (Authentication, Preview Movie, Responsive, etc.',
+    tags: [
+      {
+        name: 'nextjs',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'typescript',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: netflix,
+    github_repo: true,
+    source_code_link: 'https://github.com/greyyT/netflix-clone',
+    live_demo: true,
+    live_demo_link: 'https://greyyt-netflix-clone.vercel.app/',
   },
   {
     name: 'Ubunchuu Truong US',

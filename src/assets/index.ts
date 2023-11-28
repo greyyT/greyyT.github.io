@@ -41,6 +41,7 @@ import tripguide from './tripguide.png';
 import luna from './luna.png';
 import aisiaWeb from './aisia-web.png';
 import ubunchuu from './ubunchuu.png';
+import netflix from './netflix.png';
 
 export {
   logo,
@@ -83,4 +84,5 @@ export {
   aisiaWeb,
   ubunchuu,
   live,
+  netflix,
 };
