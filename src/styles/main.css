@@ -60,6 +60,23 @@ a:hover { text-decoration-color: currentColor; }
 .links { margin-top: 1rem; font-size: 0.95rem; }
 
 /* Post */
+.tldr {
+  margin: 0 0 2.5rem;
+  padding: 1rem 1.25rem;
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+}
+.tldr__label {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+.tldr p:last-child { margin-bottom: 0; }
+.tldr ul { margin: 0; padding-left: 1.2rem; }
+.tldr li + li { margin-top: 0.25rem; }
 .back { margin-bottom: 3rem; font-size: 0.95rem; }
 .post header { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
 .post h1 { font-size: 2.4rem; }

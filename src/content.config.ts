@@ -7,6 +7,8 @@ const posts = defineCollection({
     title: z.string(),
     date: z.coerce.date(),
     description: z.string().optional(),
+    // One sentence, or a short list of key points, shown above the post.
+    tldr: z.union([z.string(), z.array(z.string())]).optional(),
     draft: z.boolean().default(false),
   }),
 });

@@ -8,6 +8,7 @@ export async function getStaticPaths() {
 }
 const { post } = Astro.props;
 const { Content } = await render(post);
+const { tldr } = post.data;
 const date = post.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 <Base title={post.data.title} description={post.data.description}>
@@ -17,6 +18,14 @@ const date = post.data.date.toLocaleDateString('en-GB', { day: 'numeric', month:
       <h1>{post.data.title}</h1>
       <time class="muted">{date}</time>
     </header>
+    {tldr && (
+      <aside class="tldr" aria-label="Summary">
+        <p class="tldr__label">TL;DR</p>
+        {Array.isArray(tldr)
+          ? <ul>{tldr.map((point) => <li>{point}</li>)}</ul>
+          : <p>{tldr}</p>}
+      </aside>
+    )}
     <div class="prose"><Content /></div>
   </article>
 </Base>
