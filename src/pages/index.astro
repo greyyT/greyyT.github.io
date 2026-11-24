@@ -4,30 +4,24 @@ import { getCollection } from 'astro:content';
 import { SITE } from '../site';
 const posts = (await getCollection('posts', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+const iso = (d: Date) => d.toISOString().slice(0, 10);
 ---
 <Base>
-  <header class="header">
-    <h1>{SITE.name}</h1>
-    <p class="tagline">{SITE.tagline}</p>
-  </header>
-  <main class="grid">
-    <section class="about">
-      <p>I build frontend and mobile products, and the systems that make teams work better with AI.</p>
-      <p>Here I write about problems I've solved, books, and life.</p>
-      <p class="links"><a href="/rss.xml">RSS</a></p>
-    </section>
-    <section>
-      <h2 class="section-title">Writing</h2>
-      {posts.length === 0 && <p class="muted">The first post is on its way.</p>}
-      <ul class="posts">
-        {posts.map((p) => (
-          <li>
-            <a href={`/posts/${p.id}/`}>{p.data.title}</a>
-            <time datetime={p.data.date.toISOString()}>{fmt(p.data.date)}</time>
-          </li>
-        ))}
-      </ul>
-    </section>
-  </main>
+  <section class="intro">
+    <h1>{SITE.intro}</h1>
+    {SITE.about.map((line) => <p>{line}</p>)}
+  </section>
+
+  <section id="writing" class="writing" aria-labelledby="writing-title">
+    <h2 id="writing-title" class="label">Writing</h2>
+    {posts.length === 0 && <p class="muted">The first post is on its way.</p>}
+    <ol class="posts">
+      {posts.map((p) => (
+        <li>
+          <time class="meta" datetime={p.data.date.toISOString()}>{iso(p.data.date)}</time>
+          <a href={`/posts/${p.id}/`}><span>{p.data.title}</span></a>
+        </li>
+      ))}
+    </ol>
+  </section>
 </Base>

@@ -1,31 +1,39 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
-import { SITE } from '../../site';
 export async function getStaticPaths() {
   const posts = await getCollection('posts', ({ data }) => !data.draft);
   return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
 }
 const { post } = Astro.props;
 const { Content } = await render(post);
-const { tldr } = post.data;
-const date = post.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+const { title, date, description, tldr } = post.data;
+const words = (post.body ?? '').split(/\s+/).filter(Boolean).length;
+const minutes = Math.max(1, Math.round(words / 230));
+const iso = date.toISOString().slice(0, 10);
+// A string is a one-paragraph summary (a standfirst); a list is a set of key points.
+const summary = typeof tldr === 'string' ? tldr : undefined;
+const points = Array.isArray(tldr) ? tldr : undefined;
 ---
-<Base title={post.data.title} description={post.data.description}>
-  <nav class="back"><a href="/">← {SITE.name}</a></nav>
+<Base title={title} description={description ?? summary}>
   <article class="post">
-    <header>
-      <h1>{post.data.title}</h1>
-      <time class="muted">{date}</time>
+    <header class="post-head">
+      <p class="meta"><time datetime={date.toISOString()}>{iso}</time> · {minutes} min read</p>
+      <h1>{title}</h1>
+      {summary && <p class="standfirst">{summary}</p>}
     </header>
-    {tldr && (
-      <aside class="tldr" aria-label="Summary">
-        <p class="tldr__label">TL;DR</p>
-        {Array.isArray(tldr)
-          ? <ul>{tldr.map((point) => <li>{point}</li>)}</ul>
-          : <p>{tldr}</p>}
+
+    {points && (
+      <aside class="in-short" aria-labelledby="in-short-title">
+        <h2 id="in-short-title" class="label">In short</h2>
+        <ol>{points.map((point) => <li>{point}</li>)}</ol>
       </aside>
     )}
+
     <div class="prose"><Content /></div>
+
+    <footer class="post-foot">
+      <a href="/#writing">← All writing</a>
+    </footer>
   </article>
 </Base>
