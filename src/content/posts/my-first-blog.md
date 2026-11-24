@@ -8,6 +8,8 @@ tldr: There are no takeaways in this post. Just some thoughts from a fresh gradu
 
 10 P.M., Nov 24th, at a coffee shop in Dist 7, HCMC.
 
+![My laptop on a wooden table at a coffee shop, a terminal session open on the screen](/images/posts/my-first-blog-coffee-shop.jpg)
+
 Me, a fresh graduate one year out of university, surrounded by the enthusiasm and the energy of the youngsters around me: university students working together to finish their projects. I hear the laughter, the enjoyment, the discussion, and a faint sense of stress. And, to be honest with myself, I miss those times a lot: gathering with my friends to finish the last-semester project, or just discussing technical news, personal workflows with each other.
 
 We rarely meet each other now, maybe twice or thrice a year. We still talk, through Messenger, sharing technical blogs, opinions, things we have built, but it's not the same energy we had during our student years.
